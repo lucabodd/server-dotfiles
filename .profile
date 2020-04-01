@@ -1,1 +1,1 @@
-tmux new -s $(hostname)
+tmux new -s $(hostname | awk -F '.' '{print $1}')
