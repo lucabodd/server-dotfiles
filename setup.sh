@@ -18,7 +18,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plu
 
 #TMUX
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-wget -O ~/.tmux.conf https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf
+if [[ $os == 'OpenBSD' ]]; then
+    wget -O ~/.tmux.conf https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf.obsd
+elif [[ $os == 'Linux' ]]; then
+    wget -O ~/.tmux.conf https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf.lin
+fi
 
 #misc
 wget -O ~/.zshrc https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
