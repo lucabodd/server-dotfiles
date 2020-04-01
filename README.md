@@ -4,3 +4,6 @@ If you are reading this and you are not me, this should not be your business... 
 
 ## Setup
 ```curl https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/setup.sh | bash```
+
+## Update
+```curl https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/update.sh | bash```
