@@ -7,7 +7,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="fino"
-#ZSH_THEME=""
+ZSH_THEME="evan"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,3 +107,4 @@ fi
 alias ll="ls -ltrha"
 alias scr="cd /usr/local/scripts"
 alias vi="vim"
+alias dotfiles-update="curl https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/update.sh | bash"
