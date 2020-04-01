@@ -28,6 +28,10 @@ bind-key H set-window-option synchronize-panes off \;\
   set-window-option pane-border-style default \;\
   display-message "Sync panes OFF"
 
+#Bar color
+set -g status-bg yellow
+set -g status-fg black
+
 # Plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
