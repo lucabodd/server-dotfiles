@@ -3,7 +3,7 @@ os=$(uname)
 if [[ $os == 'OpenBSD' ]]; then
     pkg_cmd="pkg_add"
 elif [[ $os == 'Linux' ]]; then
-    pkg_cmd="apt-get install"
+    pkg_cmd="apt-get install -y"
 fi
 
 eval "sudo $pkg_cmd zsh"
