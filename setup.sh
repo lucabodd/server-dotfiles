@@ -14,3 +14,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 wget -O ~/.tmux.conf https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf
 wget -O ~/.zshrc https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
 wget -O ~/.ssh/authorized_keys https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.ssh/authorized_keys
+wget -O ~/.profile https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.profile
