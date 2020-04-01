@@ -1,4 +1,5 @@
-# remap prefix from 'C-b' to 'C-a'
+# set zsh to default
+set -g default-shell /usr/bin/zsh
 
 # split panes using | and -
 bind | split-window -h

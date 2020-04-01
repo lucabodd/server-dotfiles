@@ -1,1 +1,1 @@
-zsh
+tmux new -s $(hostname)

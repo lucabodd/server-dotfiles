@@ -1,0 +1,40 @@
+# set zsh to default
+set -g default-shell /usr/local/bin/zsh
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# don't rename windows automatically
+set-option -g allow-rename off
+
+#set history size
+set -g history-limit 10000
+
+bind-key j command-prompt -p "Join pane from:" "join-pane -s '%%'"
+bind-key s command-prompt -p "Send pane to:" "join-pane -t '%%'"
+
+set-window-option -g mode-keys vi
+
+#sync panes
+bind-key h set-window-option synchronize-panes on \;\
+  set-window-option pane-active-border-style fg=red \;\
+  set-window-option pane-border-style fg=yellow \;\
+  display-message "Sync panes ON"
+bind-key H set-window-option synchronize-panes off \;\
+  set-window-option pane-active-border-style fg=green \;\
+  set-window-option pane-border-style default \;\
+  display-message "Sync panes OFF"
+
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-yank'
+set -g @plugin 'tmux-plugins/tmux-open'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
+
+
