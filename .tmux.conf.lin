@@ -23,6 +23,7 @@ bind-key j command-prompt -p "Join pane from:" "join-pane -s '%%'"
 bind-key s command-prompt -p "Send pane to:" "join-pane -t '%%'"
 
 set-window-option -g mode-keys vi
+bind-key -t vi-copy 'v' begin-selection
 
 #sync panes
 bind-key h set-window-option synchronize-panes on \;\

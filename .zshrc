@@ -84,12 +84,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-tmux attach &> /dev/null
-
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
