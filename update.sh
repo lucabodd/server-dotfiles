@@ -11,6 +11,6 @@ fi
 wget -O ~/.zshrc https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
 wget -O ~/.ssh/authorized_keys https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.ssh/authorized_keys
 wget -O ~/.profile https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.profile
-wget -O ~/.oh-my-zsh/custom/themes/ https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
+wget -O ~/.oh-my-zsh/custom/themes/minimal.zsh-theme https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
 source ~/.zshrc
 
