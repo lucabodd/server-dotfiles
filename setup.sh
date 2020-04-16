@@ -15,7 +15,7 @@ eval "sudo $pkg_cmd tmux"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions .oh-my-zsh/custom/plugins/zsh-autosuggestions
-wget -O
+wget -O ~/.oh-my-zsh/custom/themes/ https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
 
 #TMUX
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
