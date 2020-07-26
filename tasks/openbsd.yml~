@@ -1,0 +1,5 @@
+---
+
+
+tasks:
+    - include_tasks: openbsd.yml

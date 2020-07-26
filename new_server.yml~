@@ -1,0 +1,21 @@
+################################################################################
+#
+# Questo playbook è da lanciare subito dopo l'installazione di un server.
+#
+# Richiama il role "checklist", che provvedere all'installazione dei pacchetti 
+# di base e alla loro configurazione
+#
+# Lanciare con:
+#
+#     ansible-playbook -i $ANSIBLE/dc/local/inventory $ANSIBLE/playbooks/new_server.yml -l [host|group] 
+#
+################################################################################
+
+---
+- hosts: all
+  become: true
+  roles:
+          - ../roles/rsyslog-client
+          - ../roles/checklist
+          - ../roles/postfix
+          - ../roles/ldap-client

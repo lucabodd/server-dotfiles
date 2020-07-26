@@ -1,0 +1,10 @@
+---
+  tasks:
+  - name "install packages"
+    openbsd_pkg:
+	name: {{ item }}
+        state: present
+    with_items:
+	- zsh
+	- emacs
+
