@@ -10,7 +10,6 @@
       src: "{{playbook_dir}}/.emacs.d"
       dest: ~/
       force: yes
-      directory_mode: yes
 
   - name: "Delete previous oh-my-zsh installation"
     file:
