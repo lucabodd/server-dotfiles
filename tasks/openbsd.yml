@@ -1,10 +1,7 @@
 ---
-  tasks:
   - name: "install packages"
     openbsd_pkg:
-	name: "{{ item }}"
-        state: present
-    with_items:
-        - zsh
-        - emacs
+      name: ['zsh', 'emacs-26.3-no_x11']
+      state: present
+    become: true
 
