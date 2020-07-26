@@ -1,7 +1,7 @@
 ---
   - name: "install packages"
     openbsd_pkg:
-      name: ['zsh', 'emacs-26.3-no_x11', 'tmux']
+      name: ['zsh', 'emacs-26.3-no_x11']
       state: present
     become: true
 
