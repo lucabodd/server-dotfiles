@@ -34,21 +34,21 @@
       repo: "https://github.com/tmux-plugins/tpm"
       dest: ~/.tmux/plugins/tpm
 
-  - name: "Download .tmux.conf"
+  - name: "Installing .tmux.conf"
     copy:
       src: "{{playbook_dir}}/.tmux.conf.obsd"
       dest: ~/.tmux.conf
       remote_src: yes
 
-  - name: "Download .zshrc"
-    get_url:
-      src: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
+  - name: "Installing .zshrc"
+    copy:
+      src: "{{playbook_dir}}/.zshrc"
       dest: ~/.zshrc
       force: yes
 
-  - name: "Download authorized_keys for luca.bodini"
-    get_url:
-      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.ssh/authorized_keys
+  - name: "Installing authorized_keys for luca.bodini"
+    copy:
+      url: "{{playbook_dir}}/.ssh/authorized_keys"
       dest: ~/.ssh/authorized_keys
 
   - name: "Changing default shell to zsh"
