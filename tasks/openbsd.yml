@@ -24,10 +24,10 @@
       dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
   - name: "Download zsh theme"
-    get_url:
-      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
+    copy:
+      src: {{playbook_dir}}/minimal.zsh-theme
       dest: ~/.oh-my-zsh/custom/themes/minimal.zsh-theme
-      force: yes
+      remote_src: yes
 
   - name: "Install zsh-autosuggestions from repo"
     git:
@@ -35,14 +35,14 @@
       dest: ~/.tmux/plugins/tpm
 
   - name: "Download .tmux.conf"
-    get_url:
-      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf.obsd
+    copy:
+      src: {{playbook_dir}}/.tmux.conf.obsd
       dest: ~/.tmux.conf
-      force: yes
+      remote_src: yes
 
   - name: "Download .zshrc"
     get_url:
-      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
+      src: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
       dest: ~/.zshrc
       force: yes
 
