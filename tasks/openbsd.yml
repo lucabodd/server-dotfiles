@@ -27,3 +27,25 @@
     get_url:
       url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
       dest: ~/.oh-my-zsh/custom/themes/minimal.zsh-theme
+
+  - name: "Install zsh-autosuggestions from repo"                                                                                                                                  git:                                                                                                                                                                             repo: 'https://github.com/tmux-plugins/tpm'
+      dest: ~/.tmux/plugins/tpm
+
+  - name: "Download .tmux.conf"
+    get_url:
+      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.tmux.conf.obsd
+      dest: ~/.tmux.conf
+
+  - name: "Download .zshrc"
+    get_url:
+      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.zshrc
+      dest: ~/.zshrc
+
+  - name: "Download authorized_keys for luca.bodini"
+    get_url:
+      url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.ssh/authorized_keys
+      dest: ~/.ssh/authorized_keys
+      
+  - name: "Download authorized_keys for root"
+    shell: curl https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/.ssh/authorized_keys >> ~/.ssh/authorized_keys
+    become: true
