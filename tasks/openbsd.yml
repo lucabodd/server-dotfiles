@@ -1,7 +1,7 @@
 ---
   - name: "install packages"
     openbsd_pkg:
-      name: ['zsh', 'emacs-26.3-no_x11']
+      name: ['zsh', 'emacs-26.3-no_x11', 'tmux']
       state: present
     become: true
 
@@ -13,10 +13,20 @@
   - name: "Download and install oh-my-zsh"
     shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  - name: "Install zsh syntax highlight repo"
+  - name: "Install zsh-syntax-highlighting from repo"
     git:
-      repo: 'https://foosball.example.org/path/to/repo.git'
+      repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
       dest: ~/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
       clone: yes
       update: no
+
+  - name: "Install zsh-autosuggestions from repo"
+    git:
+      repo: 'https://github.com/zsh-users/zsh-autosuggestions'
+      dest: ~/oh-my-zsh/custom/plugins/zsh-autosuggestions
+      clone: yes
+      update: no
+
+  - name: "Download zsh theme"
+    shell: wget -O ~/.oh-my-zsh/custom/themes/minimal.zsh-theme https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
 
