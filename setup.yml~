@@ -1,8 +1,0 @@
----
-- hosts: all
-  become: true
-
-  tasks:
-  - include_tasks: tasks/openbsd.yml
-    when: ansible_system == "OpenBSD"
-    
