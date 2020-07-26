@@ -5,3 +5,13 @@
       state: present
     become: true
 
+  - name: "Download and install oh-my-zsh"
+    shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  - name: "Install zsh syntax highlight repo"
+    git:
+      repo: 'https://foosball.example.org/path/to/repo.git'
+      dest: ~/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+      clone: yes
+      update: no
+
