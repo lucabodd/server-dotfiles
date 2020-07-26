@@ -8,7 +8,7 @@
   - name: "installing .emacs.d configurations"
     copy:
       src: "{{playbook_dir}}/.emacs.d"
-      dest: ~/.emacs.d/
+      dest: ~/
       force: yes
       directory_mode: yes
 
