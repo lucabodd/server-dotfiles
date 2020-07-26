@@ -1,4 +1,4 @@
----
+ma---
   - name: "install packages"
     openbsd_pkg:
       name: ['zsh', 'emacs-26.3-no_x11']
