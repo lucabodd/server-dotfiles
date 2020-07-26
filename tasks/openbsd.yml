@@ -5,6 +5,11 @@
       state: present
     become: true
 
+  - name: "Delete possible oh-my-zsh installation"
+    file:
+      path: ~/.oh-my-zsh
+      state: absent
+
   - name: "Download and install oh-my-zsh"
     shell: sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
