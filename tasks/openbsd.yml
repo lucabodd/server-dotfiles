@@ -8,8 +8,9 @@
   - name: "installing .emacs.d configurations"
     copy:
       src: "{{playbook_dir}}/.emacs.d"
-      dest: ~/.emacs.d
+      dest: ~/.emacs.d/
       force: yes
+      directory_mode: yes
 
   - name: "Delete previous oh-my-zsh installation"
     file:
