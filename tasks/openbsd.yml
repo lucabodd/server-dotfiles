@@ -28,7 +28,9 @@
       url: https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/minimal.zsh-theme
       dest: ~/.oh-my-zsh/custom/themes/minimal.zsh-theme
 
-  - name: "Install zsh-autosuggestions from repo"                                                                                                                                  git:                                                                                                                                                                             repo: 'https://github.com/tmux-plugins/tpm'
+  - name: "Install zsh-autosuggestions from repo"
+    git:
+      repo: 'https://github.com/tmux-plugins/tpm'
       dest: ~/.tmux/plugins/tpm
 
   - name: "Download .tmux.conf"
