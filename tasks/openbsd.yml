@@ -6,10 +6,9 @@
     become: true
 
   - name: "installing .emacs.d configurations"
-    copy:
+    synchronize:
       src: "{{playbook_dir}}/.emacs.d"
       dest: ~/
-      force: yes
 
   - name: "Delete previous oh-my-zsh installation"
     file:
@@ -30,10 +29,9 @@
       dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
   - name: "Download zsh theme"
-    copy:
+    synchronize:
       src: "{{playbook_dir}}/minimal.zsh-theme"
       dest: ~/.oh-my-zsh/custom/themes/minimal.zsh-theme
-      force: yes
 
   - name: "Install zsh-autosuggestions from repo"
     git:
@@ -41,19 +39,17 @@
       dest: ~/.tmux/plugins/tpm
 
   - name: "Installing .tmux.conf"
-    copy:
+    synchronize:
       src: "{{playbook_dir}}/.tmux.conf.obsd"
       dest: ~/.tmux.conf
-      force: yes
 
   - name: "Installing .zshrc"
-    copy:
+    synchronize:
       src: "{{playbook_dir}}/.zshrc"
       dest: ~/.zshrc
-      force: yes
 
   - name: "Installing authorized_keys for luca.bodini"
-    copy:
+    synchronize:
       src: "{{playbook_dir}}/.ssh/authorized_keys"
       dest: ~/.ssh/authorized_keys
 
