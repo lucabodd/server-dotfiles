@@ -15,28 +15,28 @@
 
   - name: "Install zsh-syntax-highlighting from repo"
     git:
-      repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+      repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
       dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
   - name: "Install zsh-autosuggestions from repo"
     git:
-      repo: 'https://github.com/zsh-users/zsh-autosuggestions'
+      repo: "https://github.com/zsh-users/zsh-autosuggestions"
       dest: ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
   - name: "Download zsh theme"
     copy:
-      src: {{playbook_dir}}/minimal.zsh-theme
+      src: "{{playbook_dir}}/minimal.zsh-theme"
       dest: ~/.oh-my-zsh/custom/themes/minimal.zsh-theme
       remote_src: yes
 
   - name: "Install zsh-autosuggestions from repo"
     git:
-      repo: 'https://github.com/tmux-plugins/tpm'
+      repo: "https://github.com/tmux-plugins/tpm"
       dest: ~/.tmux/plugins/tpm
 
   - name: "Download .tmux.conf"
     copy:
-      src: {{playbook_dir}}/.tmux.conf.obsd
+      src: "{{playbook_dir}}/.tmux.conf.obsd"
       dest: ~/.tmux.conf
       remote_src: yes
 
