@@ -13,7 +13,7 @@
   - name: "installing .emacs.d configurations for root"
     synchronize:
       src: "{{playbook_dir}}/.emacs.d"
-      dest: ~/
+      dest: /root/
     become: true
 
   - name: "Delete previous oh-my-zsh installation"
