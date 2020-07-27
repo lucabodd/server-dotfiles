@@ -46,7 +46,7 @@
 
   - name: "Installing .tmux.conf"
     synchronize:
-      src: "{{playbook_dir}}/.tmux.conf.obsd"
+      src: "{{playbook_dir}}/.tmux.conf"
       dest: ~/.tmux.conf
 
   - name: "Installing .zshrc"
