@@ -6,6 +6,7 @@ If you are reading this and you are not me, this should not be your business... 
 in server-dotfiles directory
 ```
 git clone https://github.com/lucabodd/server-dotfiles
+cd server-dotfiles
 ansible-playbook -i localhost, setup.yml
 ```
 
