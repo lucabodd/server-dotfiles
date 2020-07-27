@@ -1,9 +1,0 @@
----
-- hosts: 127.0.0.1
-  connection: local
-  become: false
-
-  tasks:
-  - include_tasks: tasks/openbsd.yml
-    when: ansible_system == "OpenBSD"
-    

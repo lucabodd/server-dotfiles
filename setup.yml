@@ -7,3 +7,5 @@
   - include_tasks: tasks/openbsd.yml
     when: ansible_system == "OpenBSD"
     
+  - include_tasks: tasks/linux.yml
+    when: ansible_system == "Linux"
