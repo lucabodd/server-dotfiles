@@ -101,4 +101,4 @@ source $ZSH/oh-my-zsh.sh
 alias ll="ls -ltrha"
 alias scr="cd /usr/local/scripts"
 alias vi="vim"
-alias dotfiles-update="curl https://raw.githubusercontent.com/lucabodd/server-dotfiles/master/update.sh | bash"
+alias dotfiles-update="cd ~/server-dotfiles; git pull; ansible-playbook -i localhost, setup.yml"
